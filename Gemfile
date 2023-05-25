@@ -76,3 +76,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+# Integrating Agolia search
+gem "algoliasearch-rails"
