@@ -10,10 +10,11 @@ console.log("hello from app/javascript/test.js! we are finally working");
 //Display!!
 //put on the screen in the correct order
 
-fetch("https://gist.githubusercontent.com/alexandremeunier/49533eebe2ec93b14d32b2333272f9f8/raw/924d89e2236ca6fa2ade7481c91bfbf858c49531/movies.json")
+const list = document.querySelector("#list-inline");
+
+
+fetch("https://www.omdbapi.com/?s=fast%20and%20furious&apikey=adf1f2d7")
   .then(response => response.json())
   .then((data) => {
-    data.Search.forEach((result) =>{
-      console.log(result);
-    });
+    console.log(data);
   });
