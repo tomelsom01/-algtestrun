@@ -14,8 +14,8 @@ console.log("hello from app/javascript/test.js! we are finally working");
 
 const list = document.querySelector("#list-inline");
 
-const fetchMovies = () => {
-  fetch("https://www.omdbapi.com/?s=fast%20and%20furious&apikey=adf1f2d7")
+const fetchMovies = (movieRequest) => {
+  fetch(`https://www.omdbapi.com/?s=${movieRequest}&apikey=adf1f2d7`)
   .then(response => response.json())
   .then((data) => {
     console.log(data);
@@ -36,5 +36,6 @@ const form = document.getElementById("search-form");
 form.addEventListener("submit", (event)=>{
   event.preventDefault();
   const input = event.currentTarget.querySelector("#search-input");
-  console.log(input);
+  list.innerHTML = "";
+  fetchMovies(input.value);
 });
