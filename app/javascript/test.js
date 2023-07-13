@@ -1,6 +1,5 @@
 const { preventOverflow } = require("@popperjs/core");
 
-console.log("hello from app/javascript/test.js! we are finally working");
 
 // Get!!
 // figure out how to use fetch and api's
